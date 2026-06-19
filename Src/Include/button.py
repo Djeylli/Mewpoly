@@ -17,7 +17,7 @@ class Button():
 
     def draw(self, screen):
         mouse_pos = pygame.mouse.get_pos()
-        translucent_color = 180
+        translucent_color = 100
         hover_color = 220
         is_hovered = self.rect.collidepoint(mouse_pos)
         self.color = self.color._replace(a=hover_color if is_hovered else translucent_color)

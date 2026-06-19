@@ -11,7 +11,7 @@ def play_menu(screen):
             size=(300, 60),
             action=None,
             font=font,
-            color=(70, 130, 180, 255),
+            color=(129, 236, 174, 255),
             border_radius=12
         ),
         Button(
@@ -20,7 +20,7 @@ def play_menu(screen):
             size=(300, 60),
             action=None,
             font=font,
-            color=(70, 130, 180, 255),
+            color=(116, 185, 255, 255),
             border_radius=12
         ),
         Button(
@@ -29,7 +29,7 @@ def play_menu(screen):
             size=(300, 60),
             action=None,
             font=font,
-            color=(70, 130, 180, 255),
+            color=(162, 155, 254, 255),
             border_radius=12
         ),
         Button(
@@ -38,9 +38,14 @@ def play_menu(screen):
             size=(300, 60),
             action=None,
             font=font,
-            color=(180, 70, 70, 255),
+            color=(255, 118, 117, 255),
             border_radius=12
         ),
     ]
+    background_color = (222, 203, 164)
+    screen.fill(background_color)
     for btn in buttons:
         btn.draw(screen)
+    font = pygame.font.SysFont("Belleza", 80)
+    title = font.render("MEWPOLY", True, (180, 140, 90))
+    screen.blit(title, (490, 80))
