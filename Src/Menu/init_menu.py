@@ -8,12 +8,12 @@ def init_bg_menu():
     return bg
 
 def init_button():
-    font = pygame.font.SysFont("Arial", 32)
+    font = pygame.font.Font("Src/Assets/font.ttf", 32)
 
     buttons = [
         Button(
             text="Jouer",
-            pos=(490, 250),
+            pos=(810, 390),
             size=(300, 60),
             action=None,
             font=font,
@@ -22,7 +22,7 @@ def init_button():
         ),
         Button(
             text="Options",
-            pos=(490, 330),
+            pos=(810, 470),
             size=(300, 60),
             action=None,
             font=font,
@@ -31,7 +31,7 @@ def init_button():
         ),
         Button(
             text="Crédits",
-            pos=(490, 410),
+            pos=(810, 550),
             size=(300, 60),
             action=None,
             font=font,
@@ -40,7 +40,7 @@ def init_button():
         ),
         Button(
             text="Quitter",
-            pos=(490, 490),
+            pos=(810, 630),
             size=(300, 60),
             action=None,
             font=font,
