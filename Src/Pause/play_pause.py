@@ -1,4 +1,4 @@
 import pygame
 
-def play_pause(screen):
+def play_pause(screen, flag):
     pass

@@ -1,4 +1,4 @@
 import pygame
 
-def play_game_over(screen):
+def play_game_over(screen, flag):
     pass
