@@ -9,7 +9,7 @@ def init_bg_menu():
     return bg
 
 def init_button():
-    font = pygame.font.Font("Src/Assets/font.ttf", 32)
+    font = pygame.font.Font("Src/Assets/font.ttf", 64)
 
     buttons = [
         Button(
@@ -18,32 +18,31 @@ def init_button():
             size=(300, 60),
             action=State.PLAY,
             font=font,
-            color=(15, 45, 60, 255),
+            color=(255, 255, 255, 255),
             border_radius=12,
             alpha=0,
-            hover_alpha=220
+            hover_alpha=0
         ),
         Button(
             text="Options",
-            pos=(810, 470),
+            pos=(810, 490),
             size=(300, 60),
-            action=State.SETTING,
             font=font,
-            color=(15, 45, 60, 255),
+            color=(255, 255, 255, 255),
             border_radius=12,
             alpha=0,
-            hover_alpha=220
+            hover_alpha=0
         ),
         Button(
             text="Quitter",
-            pos=(810, 630),
+            pos=(810, 690),
             size=(300, 60),
             action=None,
             font=font,
-            color=(15, 45, 60, 255),
+            color=(255, 255, 255, 255),
             border_radius=12,
             alpha=0,
-            hover_alpha=220
+            hover_alpha=0
         ),
     ]
     return buttons

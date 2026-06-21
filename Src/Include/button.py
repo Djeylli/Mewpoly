@@ -24,7 +24,7 @@ class Button():
         btn_surface = pygame.Surface((self.size.x, self.size.y), pygame.SRCALPHA)
         pygame.draw.rect(btn_surface, tuple(self.color), btn_surface.get_rect(), border_radius= self.border_radius)
         screen.blit(btn_surface, (self.pos.x, self.pos.y))
-        text_surface = self.font.render(self.text, True, (255, 255, 255))
+        text_surface = self.font.render(self.text, True, ((255, 255, 255) if is_hovered else (0, 0, 0)))
         text_rect = text_surface.get_rect(center= self.rect.center)
         text_shadow = self.font.render(self.text, True, (0, 0, 0))
         screen.blit(text_shadow, (text_rect.x + 2, text_rect.y + 2))
