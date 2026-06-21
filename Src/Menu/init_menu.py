@@ -17,8 +17,10 @@ def init_button():
             size=(300, 60),
             action=None,
             font=font,
-            color=(173, 216, 230, 255),
-            border_radius=12
+            color=(15, 45, 60, 255),
+            border_radius=12,
+            alpha=0,
+            hover_alpha=220
         ),
         Button(
             text="Options",
@@ -26,8 +28,10 @@ def init_button():
             size=(300, 60),
             action=None,
             font=font,
-            color=(10, 20, 140, 255),
-            border_radius=12
+            color=(15, 45, 60, 255),
+            border_radius=12,
+            alpha=0,
+            hover_alpha=220
         ),
         Button(
             text="Crédits",
@@ -36,7 +40,9 @@ def init_button():
             action=None,
             font=font,
             color=(15, 45, 60, 255),
-            border_radius=12
+            border_radius=12,
+            alpha=0,
+            hover_alpha=220
         ),
         Button(
             text="Quitter",
@@ -45,7 +51,9 @@ def init_button():
             action=None,
             font=font,
             color=(15, 45, 60, 255),
-            border_radius=12
+            border_radius=12,
+            alpha=0,
+            hover_alpha=220
         ),
     ]
     return buttons

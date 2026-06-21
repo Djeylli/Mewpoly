@@ -5,7 +5,7 @@ Color = namedtuple('Color', ['r', 'g', 'b', 'a'])
 
 class Button():
 
-    def __init__(self, text, pos, size, action, font, color, border_radius):
+    def __init__(self, text, pos, size, action, font, color, border_radius, alpha, hover_alpha):
         self.text = text
         self.pos = pygame.math.Vector2(pos)
         self.size = pygame.math.Vector2(size)
@@ -14,13 +14,13 @@ class Button():
         self.color = Color(*color)
         self.border_radius = border_radius
         self.rect = pygame.Rect(self.pos.x, self.pos.y, self.size.x, self.size.y)
+        self.alpha = alpha
+        self.hover_alpha = hover_alpha
 
     def draw(self, screen):
         mouse_pos = pygame.mouse.get_pos()
-        translucent_color = 100
-        hover_color = 220
         is_hovered = self.rect.collidepoint(mouse_pos)
-        self.color = self.color._replace(a=hover_color if is_hovered else translucent_color)
+        self.color = self.color._replace(a=self.hover_alpha if is_hovered else self.alpha)
         btn_surface = pygame.Surface((self.size.x, self.size.y), pygame.SRCALPHA)
         pygame.draw.rect(btn_surface, tuple(self.color), btn_surface.get_rect(), border_radius= self.border_radius)
         screen.blit(btn_surface, (self.pos.x, self.pos.y))
