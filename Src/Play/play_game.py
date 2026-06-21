@@ -1,4 +1,4 @@
 import pygame
 
-def play_game(screen, flag):
-    pass
+def play_game(screen, state):
+    print("GAMMMMEEEE!!")

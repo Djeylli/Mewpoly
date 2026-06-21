@@ -1,4 +1,4 @@
 import pygame
 
-def play_map(screen, flag):
+def play_map(screen, state):
     pass

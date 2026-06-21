@@ -1,4 +1,4 @@
 import pygame
 
-def play_settings(screen, flag):
+def play_settings(screen, state):
     pass
