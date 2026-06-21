@@ -1,5 +1,6 @@
 import pygame
 from Include.button import Button
+from Include.state import State
 
 def init_bg_menu():
     bg = pygame.image.load("Src/Assets/bg_menu.png")
@@ -15,7 +16,7 @@ def init_button():
             text="Jouer",
             pos=(810, 390),
             size=(300, 60),
-            action=None,
+            action=State.PLAY,
             font=font,
             color=(255, 255, 255, 255),
             border_radius=12,
@@ -26,18 +27,6 @@ def init_button():
             text="Options",
             pos=(810, 490),
             size=(300, 60),
-            action=None,
-            font=font,
-            color=(255, 255, 255, 255),
-            border_radius=12,
-            alpha=0,
-            hover_alpha=0
-        ),
-        Button(
-            text="Crédits",
-            pos=(810, 590),
-            size=(300, 60),
-            action=None,
             font=font,
             color=(255, 255, 255, 255),
             border_radius=12,
