@@ -5,7 +5,8 @@ from Include.state import State
 def init_bg_menu():
     bg = pygame.image.load("Src/Assets/bg_menu.png")
     bg = bg.convert()
-    bg = pygame.transform.scale(bg, (1920, 1080))
+    info = pygame.display.Info()
+    bg = pygame.transform.scale(bg, (info.current_w, info.current_h))
     return bg
 
 def init_button():
@@ -16,7 +17,7 @@ def init_button():
             text="Jouer",
             pos=(810, 390),
             size=(300, 60),
-            action=State.PLAY,
+            action=State.MAP,
             font=font,
             color=(255, 255, 255, 255),
             border_radius=12,
@@ -27,6 +28,7 @@ def init_button():
             text="Options",
             pos=(810, 490),
             size=(300, 60),
+            action=None,
             font=font,
             color=(255, 255, 255, 255),
             border_radius=12,
@@ -46,7 +48,6 @@ def init_button():
         ),
     ]
     return buttons
-
 
 def init_menu():
     return init_button(), init_bg_menu()
