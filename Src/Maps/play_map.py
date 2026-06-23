@@ -11,3 +11,5 @@ def play_map(screen, state):
     screen.blit(bg_maps, (0, 0))
     for btn in buttons:
         btn.draw(screen)
+        if btn.is_clicked():
+            state.state = btn.action

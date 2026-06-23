@@ -12,9 +12,9 @@ def blur_surface(surface, radius=5):
     return pygame.image.fromstring(raw_blurred, surface.get_size(), "RGB")
 
 def init_bg_map():
-    info = pygame.display.Info()
     bg = pygame.image.load("Src/Assets/bg_maps.png")
     bg = bg.convert()
+    info = pygame.display.Info()
     bg = pygame.transform.scale(bg, (info.current_w, info.current_h))
     bg = blur_surface(bg, 15)
     return bg
