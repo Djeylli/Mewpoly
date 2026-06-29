@@ -7,7 +7,7 @@ def main_loop(screen, clock, state):
     flag = False
     while state.running:
         state.running = handle_close_event()
-        screen.fill("black")
+        screen.fill("white")
         dict_state[state.state](screen, state)
         pygame.display.flip()
         clock.tick(60)
