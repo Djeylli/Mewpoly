@@ -16,6 +16,6 @@ def play_game(screen, state):
         for x, tile in enumerate(row):
             if tile:
                 screen.blit(image, (960 + x * 34 - y * 34, 100 + x * 19 + y * 19))
-    player.move()
+    player.move(map_data)
     player.draw(screen)
 
