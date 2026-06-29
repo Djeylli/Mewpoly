@@ -6,10 +6,10 @@ class Player():
         self.pos = pygame.math.Vector2(pos)
         self.size = pygame.math.Vector2(size)
         self.color = color(*color)
-        self.speed = 4(speed)
+        self.speed = speed
 
 
-    def Arrow(self):
+    def move(self):
 
         keys = pygame.key.get_pressed()
 
