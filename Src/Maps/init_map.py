@@ -21,13 +21,14 @@ def init_bg_map():
 
 def init_btn_map():
     font = pygame.font.Font("Src/Assets/font.ttf", 128)
+    info = pygame.display.Info()
 
     buttons = [
         Button(
             text=">",
-            pos=(1772, 490),
+            pos=(1772, info.current_h / 2),
             size=(128, 60),
-            action=State.PLAY,
+            action=None,
             font=font,
             color=(255, 255, 255, 255),
             border_radius=12,
@@ -36,9 +37,20 @@ def init_btn_map():
         ),
         Button(
             text="<",
-            pos=(40, 490),
+            pos=(40, info.current_h / 2),
             size=(128, 60),
             action=None,
+            font=font,
+            color=(255, 255, 255, 255),
+            border_radius=12,
+            alpha=0,
+            hover_alpha=0
+        ),
+        Button(
+            text="Play",
+            pos=(info.current_w / 2 - (128 / 2), 1000),
+            size=(128, 60),
+            action=State.PLAY,
             font=font,
             color=(255, 255, 255, 255),
             border_radius=12,

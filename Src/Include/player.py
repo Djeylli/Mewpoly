@@ -4,6 +4,8 @@ class Player():
 
     def __init__(self, pos, size, skin, speed, health, strength, attack, defense, name, level, power, money):
         self.size = pygame.math.Vector2(size)
+        self.color = color(*color)
+        self.speed = speed
         self.speed = speed
         self.health = health
         self.strength = strength
