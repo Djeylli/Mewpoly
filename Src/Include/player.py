@@ -21,10 +21,14 @@ class Player():
         self.skin.set_colorkey((0, 0, 0))
         self.hitbox = pygame.Rect(pos[0], pos[1], 20, 10)
         self.visual_pos = pygame.math.Vector2(pos)
+        self.selected = False
 
     def move(self, map_data):
 
+        mouse_pos = pygame.mouse.get_pos()
+        self.rect.collidepoint(mouse_pos)
         keys = pygame.key.get_pressed()
+        pygame.mouse.get_pressed()
 
         dx, dy = 0, 0
         if keys[pygame.K_LEFT]:
@@ -43,8 +47,6 @@ class Player():
             self.rect.y += dy
         self.visual_pos.x = self.rect.x
         self.visual_pos.y = self.rect.y
-
-
 
     def draw(self, screen):
         draw_x = self.visual_pos.x - (self.size.x / 2)
