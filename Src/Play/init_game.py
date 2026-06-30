@@ -4,7 +4,7 @@ from Include.player import Player
 def init_player():
 
     player = Player(
-        pos= (960, 100),
+        pos= (960, 150),
         size= (50,60),
         skin= ("Src/Assets/BlackCat_Free_Carysaurus/Black-Idle.png"),
         speed= 2,

@@ -36,15 +36,10 @@ class Player():
         if keys[pygame.K_DOWN]:
             dy += self.speed
 
-        print(f"Inputs: dx={dx}, dy={dy}") 
-
-        offset_x = self.size.x / 2
-        offset_y = self.size.y
-
-        if can_move(map_data, self.rect.x + dx + offset_x, self.rect.y + offset_y):
+        if can_move(map_data, self.rect.x + dx, self.rect.y):
             self.rect.x += dx
 
-        if can_move(map_data, self.rect.x + offset_x, self.rect.y + dy + offset_y):
+        if can_move(map_data, self.rect.x, self.rect.y + dy):
             self.rect.y += dy
         self.visual_pos.x = self.rect.x
         self.visual_pos.y = self.rect.y
