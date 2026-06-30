@@ -7,6 +7,7 @@ class State(Enum):
     PAUSE = auto()
     SETTING = auto()
     GAME_OVER = auto()
+    ROLL_DICE = auto()
 
 class GameState():
 

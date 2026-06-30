@@ -12,5 +12,5 @@ dict_state = {
     State.PLAY: play_game,
     State.PAUSE: play_pause,
     State.SETTING: play_settings,
-    State.GAME_OVER: play_game_over
+    State.GAME_OVER: play_game_over,
 }
