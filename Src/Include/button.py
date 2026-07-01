@@ -30,7 +30,12 @@ class Button():
         screen.blit(text_shadow, (text_rect.x + 2, text_rect.y + 2))
         screen.blit(text_surface, text_rect)
 
-    def is_clicked(self):
-        mouse_pos = pygame.mouse.get_pos()
-        mouse_pressed = pygame.mouse.get_pressed()
-        return self.rect.collidepoint(mouse_pos) and mouse_pressed[0]
+    def is_clicked(self, events):
+        for event in events:
+            if (
+                event.type == pygame.MOUSEBUTTONDOWN
+                and event.button == 1
+                and self.rect.collidepoint(event.pos)
+            ):
+                return True
+        return False

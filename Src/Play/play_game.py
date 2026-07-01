@@ -19,14 +19,12 @@ def draw_game(screen):
     text_surface = font.render(money_text, True, (0, 0, 0))
     screen.blit(text_surface, (20, 20))
 
-def play_game(screen, state):
+def play_game(screen, state, events):
     global map_data, image, player, button_roll
 
     if map_data is None:
         player, button_roll, image, map_data = init_game()
 
     draw_game(screen)
-    for i in range(4):
-        if button_roll.is_clicked():
-            print(roll_dice())
-        print("****")
+    if button_roll.is_clicked(events):
+        print(roll_dice())
