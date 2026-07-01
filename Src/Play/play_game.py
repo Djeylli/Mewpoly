@@ -14,15 +14,19 @@ def draw_game(screen):
     player.move(map_data)
     player.draw(screen)
     button_roll.draw(screen)
+    font = pygame.font.SysFont("Arial", 24)
+    money_text = "Argent : " + str(player.money) + " €"
+    text_surface = font.render(money_text, True, (0, 0, 0))
+    screen.blit(text_surface, (20, 20))
 
-def play_game(screen, state, event):
+def play_game(screen, state):
     global map_data, image, player, button_roll
 
     if map_data is None:
         player, button_roll, image, map_data = init_game()
 
     draw_game(screen)
-    if button_roll.is_clicked():
-        st = button_roll.action
-        if st == State.ROLL_DICE:
+    for i in range(4):
+        if button_roll.is_clicked():
             print(roll_dice())
+        print("****")
